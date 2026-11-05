@@ -1,0 +1,217 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>THOMAS® · Real Feeds We Run</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Epilogue:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet"><style>
+:root{
+--paper:#ffffff;--paper-2:#f6f5f1;--paper-3:#ecebe6;
+--ink:#0c0c0c;--line:#e2e1dc;--muted:#6b6b65;--text:#141414;
+--invert-bg:#0c0c0c;--invert-text:#f6f5f1;--invert-muted:#9c9c95;--invert-line:#2a2a28;
+--font-display:"Anton","Archivo Black",Impact,sans-serif;
+--font-serif:"Fraunces",Georgia,serif;
+--font-body:"Epilogue","Inter",system-ui,sans-serif;
+--maxw:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--paper-2);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+.slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:clamp(64px,9vw,120px) clamp(24px,5vw,56px);background:var(--paper);border-bottom:1px solid var(--line);page-break-after:always}
+.slide--ink{background:var(--invert-bg);color:var(--invert-text);border-bottom:1px solid var(--invert-line)}
+.inner{max-width:var(--maxw);margin:0 auto;width:100%}
+.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:32px;display:flex;align-items:center;gap:16px}
+.slide--ink .eyebrow{color:var(--invert-muted)}
+.eyebrow::before{content:"";width:56px;height:1px;background:currentColor;display:block}
+.display{font-family:var(--font-display);font-weight:400;font-size:clamp(2.6rem,7.4vw,5.6rem);line-height:.92;letter-spacing:-.01em;text-transform:uppercase}
+.serif{font-family:var(--font-serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:0}
+.lead{font-size:clamp(1.1rem,2vw,1.45rem);color:var(--muted);max-width:46ch;margin-top:28px}
+.slide--ink .lead{color:var(--invert-muted)}
+.grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+.slide--ink .grid{background:var(--invert-line);border-color:var(--invert-line)}
+.g2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.cell{background:var(--paper);padding:32px 28px}
+.slide--ink .cell{background:var(--invert-bg)}
+.cell__n{font-family:var(--font-display);font-size:.95rem;color:var(--muted);margin-bottom:14px}
+.cell__t{font-family:var(--font-display);font-size:1.3rem;text-transform:uppercase;line-height:1.05;margin-bottom:10px}
+.slide--ink .cell__t{color:var(--invert-text)}
+.cell p{font-size:.94rem;color:var(--muted)}
+.slide--ink .cell p{color:var(--invert-muted)}
+.stat__num{font-family:var(--font-display);font-size:clamp(2.2rem,4.8vw,3.4rem);line-height:1;margin-bottom:12px}
+.stat__lb{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);line-height:1.5}
+.slide--ink .stat__lb{color:var(--invert-muted)}
+.split{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,72px);align-items:start}
+@media(max-width:820px){.split{grid-template-columns:1fr}}
+.pull p{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.35;max-width:32ch}
+.pull cite{display:block;margin-top:24px;font-family:var(--font-body);font-style:normal;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.slide--ink .pull p{color:var(--invert-text)}
+.slide--ink .pull cite{color:var(--invert-muted)}
+.chain{margin-top:40px;display:flex;align-items:center;gap:12px;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.slide--ink .chain{color:var(--invert-muted)}
+.chain__arrow{font-size:1.15rem;line-height:1;font-weight:400}
+/* pricing tier cards */
+.tiers{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.tiers{grid-template-columns:1fr}}
+.tiers2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.tiers2{grid-template-columns:1fr}}
+.tier{background:var(--paper);padding:30px 26px;display:flex;flex-direction:column}
+.tier__head{min-height:118px}
+.tier ul{flex:1}
+.slide--ink .tier{background:var(--invert-bg)}
+.tier--best{background:var(--paper-2)}
+.slide--ink .tier--best{background:#141412}
+.tier__tag{font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;min-height:16px}
+.slide--ink .tier__tag{color:var(--invert-muted)}
+.tier__name{font-family:var(--font-display);font-size:1.4rem;text-transform:uppercase;line-height:1;margin-bottom:8px}
+.tier__price{font-family:var(--font-display);font-size:2.1rem;line-height:1;margin:12px 0 4px}
+.tier__unit{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;min-height:32px;line-height:1.35}
+.slide--ink .tier__unit{color:var(--invert-muted)}
+.tier ul{list-style:none;margin-top:4px}
+.tier li{font-size:.86rem;color:var(--muted);padding:7px 0 7px 20px;position:relative;line-height:1.45;border-top:1px solid var(--line)}
+.slide--ink .tier li{color:var(--invert-muted);border-top-color:var(--invert-line)}
+.tier li::before{content:"—";position:absolute;left:0;top:7px;opacity:.5}
+.tier li.on::before{content:"✓";font-weight:700;opacity:1;color:var(--ink)}
+.slide--ink .tier li.on::before{color:var(--invert-text)}
+/* client logo wall — drop files into ./assets/logos/ */
+.logos{margin-top:44px;border-top:1px solid var(--line);padding-top:28px}
+.slide--ink .logos{border-top-color:var(--invert-line)}
+.logos__lb{font-size:.68rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.slide--ink .logos__lb{color:var(--invert-muted)}
+.logos__row{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(24px,4vw,52px)}
+.logos__row img{height:26px;width:auto;object-fit:contain;opacity:.62;filter:grayscale(100%)}
+.slide--ink .logos__row img{filter:grayscale(100%) invert(1);opacity:.7}
+.strip{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);line-height:2.4;word-spacing:.08em}
+.slide--ink .strip{color:var(--invert-muted)}
+.cover{justify-content:space-between}
+.cover__top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.wm{font-family:var(--font-display);font-size:1.5rem;letter-spacing:.02em}
+.dl{font-size:.74rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;text-align:right;line-height:2.1;color:var(--invert-muted)}
+.cover__bot{display:flex;justify-content:space-between;gap:24px;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--invert-muted);flex-wrap:wrap}
+.cta{display:inline-block;font-family:var(--font-body);font-weight:600;font-size:1rem;border:1.5px solid var(--invert-text);color:var(--invert-text);padding:18px 38px;margin-top:40px;text-decoration:none;letter-spacing:.04em}
+
+.objs{margin-top:44px;border-top:1px solid var(--line)}
+.slide--ink .objs{border-top-color:var(--invert-line)}
+.obj__row{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(24px,4vw,56px);padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.slide--ink .obj__row{border-bottom-color:var(--invert-line)}
+@media(max-width:820px){.obj__row{grid-template-columns:1fr;gap:8px}}
+.obj__q{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.05rem,1.9vw,1.35rem);line-height:1.3;color:var(--ink)}
+.slide--ink .obj__q{color:var(--invert-text)}
+.obj__a{font-size:clamp(.95rem,1.5vw,1.05rem);line-height:1.55;color:var(--muted)}
+.slide--ink .obj__a{color:var(--invert-muted)}
+/* Q&A layout */
+.qa{margin-top:8px}
+.qa__row{display:grid;grid-template-columns:.62fr 1.38fr;gap:clamp(28px,5vw,64px);padding:38px 0;border-top:1px solid var(--line)}
+.slide--ink .qa__row{border-top-color:var(--invert-line)}
+.qa__row:last-child{border-bottom:1px solid var(--line)}
+.slide--ink .qa__row:last-child{border-bottom-color:var(--invert-line)}
+@media(max-width:820px){.qa__row{grid-template-columns:1fr;gap:18px}}
+.qa__n{font-family:var(--font-display);font-size:.8rem;letter-spacing:.2em;color:var(--muted);margin-bottom:12px}
+.slide--ink .qa__n{color:var(--invert-muted)}
+.qa__q p{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.15rem,2.2vw,1.6rem);line-height:1.3;color:var(--muted)}
+.slide--ink .qa__q p{color:var(--invert-muted)}
+.qa__h{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1;margin-bottom:16px}
+.qa__a p{font-size:clamp(1rem,1.6vw,1.15rem);color:var(--muted);max-width:56ch;margin-bottom:12px}
+.slide--ink .qa__a p{color:var(--invert-muted)}
+.qa__a strong{color:var(--ink)}
+.slide--ink .qa__a strong{color:var(--invert-text)}
+
+/* menu layout — shoot menu / branding menu */
+.menu{margin-top:44px;border-top:1px solid var(--line)}
+.slide--ink .menu{border-top-color:var(--invert-line)}
+.menu__row{display:grid;grid-template-columns:1fr auto;gap:24px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.slide--ink .menu__row{border-bottom-color:var(--invert-line)}
+@media(max-width:820px){.menu__row{grid-template-columns:1fr;gap:6px}}
+.menu__item{font-family:var(--font-display);font-size:1.05rem;text-transform:uppercase;line-height:1.15}
+.menu__note{font-size:.85rem;color:var(--muted);margin-top:6px;font-family:var(--font-body);text-transform:none}
+.slide--ink .menu__note{color:var(--invert-muted)}
+.menu__price{font-family:var(--font-display);font-size:1.15rem;white-space:nowrap;text-align:right}
+.slide--ink .menu__price{color:var(--invert-text)}
+
+/* --- polish --- */
+.eyebrow::before{width:40px;opacity:.55}
+.display{letter-spacing:-.015em}
+.serif{letter-spacing:-.005em}
+.lead{line-height:1.62}
+.grid{margin-top:44px}
+.cell{padding:34px 30px;transition:none}
+.cell__t{letter-spacing:.005em}
+.tier{position:relative}
+.tier--best::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--ink)}
+.slide--ink .tier--best::before{background:var(--invert-text)}
+.tier__price{letter-spacing:-.02em}
+.tier li{padding-left:22px}
+.tier li::before{top:6px}
+.pull p{letter-spacing:-.01em}
+.chain{margin-top:44px;opacity:.75;letter-spacing:.2em}
+.chain__arrow{opacity:.9}
+.stat__num{letter-spacing:-.02em}
+.stat__lb{letter-spacing:.12em}
+.strip{line-height:2.6}
+.qa__row{padding:42px 0}
+@page{size:13.333in 8in;margin:0}
+
+@page{size:13.333in 8in;margin:0}
+.slide{height:8in;min-height:8in;padding:56px 64px;overflow:hidden;justify-content:center}
+.inner{max-width:1120px}
+.shot{border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.10);display:block;width:100%}
+.slide--ink .shot{border-color:var(--invert-line);box-shadow:none}
+.cap{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:10px;font-weight:600}
+.slide--ink .cap{color:var(--invert-muted)}
+.two{display:grid;grid-template-columns:1fr 1.35fr;gap:48px;align-items:center}
+.two--even{grid-template-columns:1fr 1fr}
+.ph{display:grid;gap:8px}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.steps{counter-reset:s;margin-top:22px}
+.steps div{border-top:1px solid var(--line);padding:12px 0 12px 40px;position:relative;font-size:1rem;color:var(--muted)}
+.steps div b{color:var(--ink);font-weight:600}
+.steps div::before{counter-increment:s;content:"0" counter(s);position:absolute;left:0;top:12px;font-family:var(--font-display);color:var(--ink);font-size:1.05rem}
+.slide--ink .steps div{border-top-color:var(--invert-line);color:var(--invert-muted)}
+.slide--ink .steps div b,.slide--ink .steps div::before{color:var(--invert-text)}
+.kitnav{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--invert-line);border:1px solid var(--invert-line);margin-top:36px}
+.kitnav a{background:var(--invert-bg);padding:22px 22px;color:var(--invert-text);text-decoration:none;display:block}
+.kitnav a b{font-family:var(--font-display);font-weight:400;font-size:1.25rem;letter-spacing:.01em;display:block}
+.kitnav a span{font-size:.82rem;color:var(--invert-muted);display:block;margin-top:6px}
+.kitnav a i{font-style:normal;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--invert-muted);display:block;margin-top:10px;word-break:break-all}
+.contact{display:flex;gap:28px;flex-wrap:wrap;font-size:.8rem;letter-spacing:.06em;color:var(--invert-muted);margin-top:28px}
+.ver{position:absolute;right:28px;bottom:20px;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.slide{position:relative}
+.stat__num{font-size:2.5rem!important;line-height:1.05}
+.stat__lb{font-size:.62rem;margin-top:6px}
+.src{font-size:.62rem;color:var(--muted);margin-top:14px;letter-spacing:.02em;max-width:110ch}
+.slide .display{font-size:4.2rem}
+.cover .display{font-size:5.2rem;line-height:.96}
+.cover .wm{font-size:1.5rem}
+.slide.cover{justify-content:space-between}
+.slide .lead{font-size:1.2rem;line-height:1.55}
+.cell__t{font-size:1.45rem}
+.cell p{font-size:1rem;line-height:1.5}
+.cover .inner{max-width:1152px}
+.ver{right:64px;bottom:24px}
+
+.slide--ink .src{color:var(--invert-muted)}
+
+body{background:var(--invert-bg);color:var(--invert-text)}
+.sp{display:grid;gap:.34in;padding:.5in .6in;box-sizing:border-box;min-height:8in;border-bottom:1px solid var(--invert-line);align-items:center;max-width:1280px;margin:0 auto;position:relative}
+.sp h1,.sp h2{font-family:var(--font-display);font-weight:400;text-transform:uppercase;line-height:.96;margin:0}
+.sp h1{font-size:5.4rem}.sp h2{font-size:3.3rem}
+.sp .serif{font-family:var(--font-serif);font-style:italic;text-transform:none;letter-spacing:0}
+.sp .eb{font-size:.66rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--invert-muted);margin-bottom:16px}
+.sp p.t{color:var(--invert-muted);font-size:1.06rem;line-height:1.5;margin-top:14px;max-width:44ch}
+.sp .ln{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--invert-text);margin-top:14px;line-height:1.7}
+.pr{grid-template-columns:5.8in 5.8in;justify-content:center;align-content:center;align-items:start;gap:.18in .34in}.pr .eb{margin-bottom:10px}.pr h2{font-size:2.5rem}
+.fd{margin:0;min-width:0}.fd img{display:block;width:100%;height:auto;border:1px solid var(--invert-line)}
+.fd figcaption{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--invert-muted);margin-top:8px;font-weight:600}
+.st{display:flex;gap:28px;margin-top:20px}.st b{white-space:nowrap;font-family:var(--font-display);font-weight:400;font-size:1.6rem;display:block;line-height:1.05}.st span{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--invert-muted);display:block;margin-top:4px;line-height:1.4}
+.cv{grid-template-columns:5.33in 8in;padding:0;align-items:stretch;height:8in}
+.cv .l{padding:.6in;display:flex;flex-direction:column;justify-content:space-between}
+.cv .r{height:8in;overflow:hidden}
+.cv .r img{width:100%;height:100%;object-fit:cover;display:block;min-height:0}
+.ph8{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:2.55in 2.55in;gap:5px;margin-top:18px}
+.ph8 img{width:100%;height:100%;object-fit:cover;display:block}
+.end a{color:var(--invert-text)}.end .row{margin-top:10px;color:var(--invert-muted);font-size:1rem}
+.mp img{height:2.55in;object-fit:cover}
+.ver2{position:absolute;right:.6in;bottom:.22in;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--invert-muted)}
+@media print{@page{size:13.333in 8in;margin:0}.sp{height:8in;min-height:8in;max-width:none;break-after:page;break-inside:avoid;overflow:hidden;border-bottom:none}}
+@media screen and (max-width:900px){.sp{display:block!important;width:100%;overflow:hidden;min-height:0;height:auto;padding:36px 20px}.sp h1{font-size:3.2rem}.sp h2{font-size:2.3rem}.fd{margin-top:18px}.cv .l{padding:0 0 22px}.cv{height:auto}.cv .r{height:auto}.cv .r img{height:auto}.cv .eb{margin-top:14px!important}.ph8{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:44vw}.ver2{position:static;margin-top:18px}}
+</style></head><body><section class="sp cv"><div class="l"><div style="font-family:var(--font-display);font-size:1.5rem">THOMAS<sup style="font-size:.5em">®</sup></div>
+<div><h1>Real feeds<br/><span class="serif">we run.</span></h1><p class="t">Instagram feeds we run for apartment communities. They mix THOMAS property photography with lifestyle content, built to each community's brand.</p><div class="ln">Urban luxury, Austin · organic feed we run</div></div>
+<div class="eb" style="margin:0">Quality showcase · 2026</div></div>
+<div class="r"><img src="img/feed-01.jpg" alt="Apartment community Instagram feed"></div></section><section class="sp pr"><div style="grid-column:span 2"><div class="eb">Real feeds we run</div><h2>One standard. <span class="serif">Every community its own brand.</span></h2></div><figure class="fd"><img src="img/feed-02.jpg" alt="Luxury high-rise, Miami · organic feed we run"><figcaption>Luxury high-rise, Miami · organic feed we run</figcaption></figure><figure class="fd"><img src="img/feed-03.jpg" alt="Luxury high-rise, Miami · organic feed we run"><figcaption>Luxury high-rise, Miami · organic feed we run</figcaption></figure><div class="ver2">THOMAS® · Showcase · v5 · Nov 2026</div></section><section class="sp pr"><figure class="fd"><img src="img/feed-04.jpg" alt="Transit-oriented lease-up, Miami · organic feed we run"><figcaption>Transit-oriented lease-up, Miami · organic feed we run</figcaption></figure><figure class="fd"><img src="img/feed-05.jpg" alt="Boutique apartments, Austin · organic feed we run"><figcaption>Boutique apartments, Austin · organic feed we run</figcaption></figure><div class="ver2">THOMAS® · Showcase · v5 · Nov 2026</div></section><section class="sp pr"><div style="grid-column:span 2"><div class="eb">Real feeds we run</div><h2>Calm, editorial, <span class="serif">on brand.</span></h2></div><figure class="fd"><img src="img/feed-06.jpg" alt="Resort-style community · organic feed we run"><figcaption>Resort-style community · organic feed we run</figcaption></figure><figure class="fd"><img src="img/feed-07.jpg" alt="Riverfront community, Miami · organic feed we run"><figcaption>Riverfront community, Miami · organic feed we run</figcaption></figure><div class="ver2">THOMAS® · Showcase · v5 · Nov 2026</div></section><section class="sp pr"><figure class="fd"><img src="img/feed-08.jpg" alt="Apartment community, Austin · organic feed we run"><figcaption>Apartment community, Austin · organic feed we run</figcaption></figure><figure class="fd"><img src="img/feed-09.jpg" alt="Arts-district community, South Florida · organic feed we run"><figcaption>Arts-district community, South Florida · organic feed we run</figcaption></figure><div class="ver2">THOMAS® · Showcase · v5 · Nov 2026</div></section><section class="sp pr"><div style="grid-column:span 2"><div class="eb">Real feeds we run</div><h2>Built around <span class="serif">the water.</span></h2></div><figure class="fd"><img src="img/feed-10.jpg" alt="Bayfront high-rise, Miami · organic feed we run"><figcaption>Bayfront high-rise, Miami · organic feed we run</figcaption></figure><figure class="fd"><img src="img/feed-11.jpg" alt="Waterfront lifestyle, Miami · organic feed we run"><figcaption>Waterfront lifestyle, Miami · organic feed we run</figcaption></figure><div class="ver2">THOMAS® · Showcase · v5 · Nov 2026</div></section><section class="sp pr"><figure class="fd"><img src="img/feed-12.jpg" alt="Waterfront townhomes, Miami · organic feed we run"><figcaption>Waterfront townhomes, Miami · organic feed we run</figcaption></figure><figure class="fd"><img src="img/feed-13.jpg" alt="Coastal community · organic feed we run"><figcaption>Coastal community · organic feed we run</figcaption></figure><div class="ver2">THOMAS® · Showcase · v5 · Nov 2026</div></section><section class="sp" style="grid-template-columns:1fr 1fr;align-content:center">
+<div style="grid-column:span 2"><div><div class="eb">Beyond the feed</div><h2>Atlantic <span class="serif">Crossing.</span></h2><p class="t">Location aerials and maps that show a new community in its neighborhood.</p><div class="ln">Delray Beach, Florida · aerials + maps</div></div></div>
+<figure class="fd"><img src="img/feed-ac-labels.jpg" alt="Labeled aerial"><figcaption>Labeled aerial</figcaption></figure><figure class="fd"><img src="img/feed-ac-map.jpg" alt="Neighborhood map"><figcaption>Neighborhood map</figcaption></figure><div class="ver2">THOMAS® · Showcase · v5 · Nov 2026</div></section><section class="sp" style="display:block;padding-top:.45in"><div class="eb">The photography</div><h2>Shot by <span class="serif">our crews.</span></h2>
+<div class="ph8"><img src="img/gc-pool-aerial.jpg" alt="THOMAS photography"><img src="img/cd-twilight.jpg" alt="THOMAS photography"><img src="img/me-bedroom.jpg" alt="THOMAS photography"><img src="img/bs-dusk.jpg" alt="THOMAS photography"><img src="img/gc-clubroom.jpg" alt="THOMAS photography"><img src="img/bs-aerial.jpg" alt="THOMAS photography"><img src="img/gc-night.jpg" alt="THOMAS photography"><img src="img/cd-amenity.jpg" alt="THOMAS photography"></div><div class="ln" style="font-size:.6rem;color:var(--invert-muted)">Grove Central · Cortland Delray · Metro Edgewater · Biscayne Shores</div><div class="ver2">THOMAS® · Showcase · v5 · Nov 2026</div></section><section class="sp end" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start"><div class="eb">Next</div><h2 style="font-size:4.2rem">See the results<br/><span class="serif">behind the work.</span></h2><div style="margin-top:22px"><div class="row"><a href="https://jamesthomasphoto-rgb.github.io/thomas-sales-kit/THOMAS-Deck-Property-Managers.pdf">The deck</a> · Who we are, the dashboard, how we run a portfolio.</div><div class="row"><a href="https://jamesthomasphoto-rgb.github.io/thomas-sales-kit/THOMAS-Case-Studies.pdf">Case studies</a> · Grove Central and Metro Edgewater. One page each.</div><div class="row"><a href="https://jamesthomasphoto-rgb.github.io/thomas-sales-kit/THOMAS-Grove-Central-White-Paper.pdf">White paper</a> · Grove Central, every number labeled by source.</div></div><div class="ln" style="color:var(--invert-muted);letter-spacing:.08em;text-transform:none;font-size:.85rem;margin-top:26px">polina@thomasproductionsco.com · james@thomasproductionsco.com<br/>561.386.0962 · calendly.com/thomaspros · @thomasproductionsco</div><div class="ver2">THOMAS® · Showcase · v5 · Nov 2026</div></section></body></html>
